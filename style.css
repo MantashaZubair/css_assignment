@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*main section*/
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#main::before {
+  content: "";
+  position: absolute;
+  background-image: url(image/home.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+}
+#main_content {
+  position: absolute;
+}
+#main_content h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-top: 1em;
+}
+
+#main_content h2 {
+  color: wheat;
+  font-family: cursive;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+button {
+  height: 40px;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 240px;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+button:hover {
+  background-color: black;
+  border-style: none;
+  color: white;
+}
+
+.header {
+  display: flex;
+  background: lightgoldenrodyellow;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.header h1 {
+  margin: 10px;
+  margin-left: 20px;
+  color: brown;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar ul {
+  display: flex;
+  width: 100%;
+}
+.navbar ul li {
+  list-style-type: none;
+  padding: 20px;
+}
+.navbar ul li a:link {
+  color: black;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: chocolate;
+  font-size: 20px;
+}
+
+.navbar ul li a:hover {
+  color: blue;
+}
+
+.menu {
+  padding: 25px 0 25px 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(245, 242, 148),
+    rgba(243, 241, 172, 0)
+  );
+}
+#contact-box {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+#contact {
+  box-shadow: 2px 2px 2px gainsboro;
+  border: 1px solid gainsboro;
+  margin: 5px;
+  width: 50%;
+}
+#contact h2 {
+  text-align: center;
+  background-color: darkgray;
+  padding: 10px;
+  color: brown;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px 30px 30px;
+}
+input {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+}
+input:hover {
+  background-color: lightgray;
+}
+textarea {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+}
+#btn {
+  border-radius: 12px;
+  background-color: chocolate;
+  font-size: 1em;
+  font-weight: bold;
+}
+.section {
+  padding: 25px 0 25px 0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+#menu-row {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+#menu-col {
+  box-shadow: 2px 2px 2px gainsboro;
+  border: 1px solid gainsboro;
+  margin: 5px;
+  width: 100%;
+}
+#menu-col h2 {
+  color: white;
+  background-color: darkgray;
+  text-align: center;
+  margin: 5px;
+  padding: 12px;
+}
+#item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#image {
+  margin: 5px;
+}
+#image img {
+  height: 240px;
+  width: 250px;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+#image img:hover {
+  transform: scale(1.1);
+}
+.item-name {
+  background-color: lightgrey;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 7px;
+  color: red;
+}
+
+.item-name:hover {
+  background-color: darkgray;
+  transform: scale(1.1);
+}
+p {
+  padding: 20px 10em 0 10em;
+  font-size: 18px;
+  font-family: cursive;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar ul li {
+    box-shadow: 2px 2px 2px gainsboro;
+  }
+
+  #contact {
+    width: 100%;
+  }
+
+  #item {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    padding: 10px;
+  }
+}
