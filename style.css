@@ -6,8 +6,16 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-/*main section*/
-
+/*Homepage----------------------------!*/
+.container{
+  background-image: linear-gradient(
+    to right,
+    rgb(226, 224, 154),
+    rgb(240, 236, 121),
+    rgba(243, 241, 172, 0)
+  );
+  height: 100%;
+}
 #main {
   width: 100vw;
   height: 100vh;
@@ -43,6 +51,8 @@ body {
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
+
+/*Homepage order button style*/
 button {
   height: 40px;
   width: 120px;
@@ -62,6 +72,7 @@ button:hover {
   color: white;
 }
 
+/* header and navigation part use in homepage, menupage,aboutuspage------------------------!*/
 .header {
   display: flex;
   background: lightgoldenrodyellow;
@@ -78,78 +89,36 @@ button:hover {
   color: brown;
 }
 
-.navbar {
+nav ul {
   display: flex;
+  list-style: none;
 }
-.navbar ul {
-  display: flex;
-  width: 100%;
-}
-.navbar ul li {
-  list-style-type: none;
+nav ul li {
   padding: 20px;
 }
-.navbar ul li a:link {
-  color: black;
-}
-.navbar ul li a {
+
+nav ul li a {
   text-decoration: none;
   color: chocolate;
   font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 5px;
+
+
 }
 
-.navbar ul li a:hover {
-  color: blue;
+nav ul li a:hover,
+nav ul li a.active{
+  color:rgb(117, 52, 7);
+  background:rgb(239, 239, 138);
 }
-
+  
+/* Menu page----------------------!*/
 .menu {
   padding: 25px 0 25px 0;
-  background-image: linear-gradient(
-    to right,
-    rgb(245, 242, 148),
-    rgba(243, 241, 172, 0)
-  );
-}
-#contact-box {
-  display: flex;
-  justify-content: center;
-  margin: 3em;
-}
-#contact {
-  box-shadow: 2px 2px 2px gainsboro;
-  border: 1px solid gainsboro;
-  margin: 5px;
-  width: 50%;
-}
-#contact h2 {
-  text-align: center;
-  background-color: darkgray;
-  padding: 10px;
-  color: brown;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 30px 30px 30px 30px;
-}
-input {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 3px;
-}
-input:hover {
-  background-color: lightgray;
-}
-textarea {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 3px;
-}
-#btn {
-  border-radius: 12px;
-  background-color: chocolate;
-  font-size: 1em;
-  font-weight: bold;
+
 }
 .section {
   padding: 25px 0 25px 0;
@@ -187,7 +156,6 @@ textarea {
   justify-content: space-around;
   align-items: center;
 }
-
 #image {
   margin: 5px;
 }
@@ -213,24 +181,102 @@ textarea {
   background-color: darkgray;
   transform: scale(1.1);
 }
-p {
-  padding: 20px 10em 0 10em;
-  font-size: 18px;
-  font-family: cursive;
+
+
+/*Contactpage-------------------------------*/
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+#contact {
+  box-shadow: 2px 2px 2px gainsboro;
+  border: 1px solid gainsboro;
+  margin: 5px;
+  width: 50%;
+}
+#contact h2 {
+  text-align: center;
+  background-color: darkgray;
+  padding: 10px;
+  color: brown;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px 30px 30px;
+}
+input {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+}
+input:hover {
+  background-color: lightgray;
+}
+textarea {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+}
+#btn {
+  border-radius: 12px;
+  background-color: chocolate;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid rgb(102, 45, 4);
+}
+#btn:hover{
+  border-style: none;
+  opacity: 0.9;
+}
+
+/*aboutpage*/
+
+.about{
+  display: flex;
+ flex-direction:row;
+   justify-content: space-between;
+   align-items: center;
+
+}
+p{
+  padding: 20px 30px 30px 30px;
+  font-size: 18px;
+  color: rgb(112, 48, 3)
+
+}
+img{
+  padding: 20px 30px 30px 30px;
+}
+
+
+
+
+/*For Responsive all screen*/
 @media screen and (max-width: 750px) {
   .header {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
-  .navbar ul {
+ 
+  nav ul {
     display: flex;
     flex-direction: column;
+   
   }
-  .navbar ul li {
+  nav ul li {
     box-shadow: 2px 2px 2px gainsboro;
   }
+  nav ul li:hover
+{
+  color:rgb(117, 52, 7);
+  background:rgb(239, 239, 138);
+  width: 100%;
+}
 
   #contact {
     width: 100%;
@@ -240,7 +286,11 @@ p {
     display: flex;
     flex-direction: column;
   }
-  p {
-    padding: 10px;
+  .about{
+    display: flex;
+   flex-direction:column-reverse;
+     align-items: center;
+  
   }
+  
 }

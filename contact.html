@@ -12,26 +12,32 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+  
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--connect style.css-->
     <link rel="stylesheet" href="style.css" />
     <title>Contactus pageF</title>
   </head>
   <body>
+    <div class="container">
     <div class="menu">
       <div id="contact-box">
-        <div id="contact">
-          <h2>Contact Us</h2>
+        <div id="contact" >
+          <h2><a class="list-group-item" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a>
+          Contact Us</h2>
           <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="@gmail.com" />
-            <input type="text" placeholder="mobile no." />
-            <input type="text" placeholder="Food name" />
+            <input type="text" placeholder="Name"  required/>
+            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Mobile no." required />
+            <input type="text" placeholder="Food name"  required/>
             <textarea>address</textarea>
             <input type="submit" value="Order Now" id="btn" />
           </form>
         </div>
       </div>
+    </div>
     </div>
   </body>
 </html>
